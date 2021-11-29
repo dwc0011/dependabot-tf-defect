@@ -22,7 +22,7 @@ module "dns" {
 }
 
 module "distribution_label" {
-  source     = "bitbucket.org/cloudposse/terraform-null-label.git"
+  source     = "https://github.com/cloudposse/terraform-null-label.git"
   namespace  = var.namespace
   stage      = var.stage
   name       = var.name
