@@ -1,22 +1,22 @@
 terraform {
   required_providers {
     kubernetes = {
-      source = "hashicorp/kubernetes"
+      source  = "hashicorp/kubernetes"
       version = "2.3.2"
     }
   }
 }
 
 module "parent_one" {
-  source     = "./child_module_one"  
+  source = "./child_module_one"
 }
 
 module "parent_two" {
-  source     = "./child_module_one"  
+  source = "./child_module_one"
 }
 
 module "parent_three" {
-  source     = "./child_module_two"  
+  source = "./child_module_two"
 }
 
 module "dns" {
@@ -37,4 +37,19 @@ module "dns_dup" {
   parent_zone_name = var.parent_zone_name
   target_dns_name  = aws_cloudfront_distribution.default.domain_name
   target_zone_id   = aws_cloudfront_distribution.default.hosted_zone_id
+}
+
+module "first-dep" {
+  source  = "cloudposse/elasticache-redis/aws"
+  version = "0.42.0"
+
+  name = "it supposed to be updated by dependabot"
+}
+
+module "second-dep" {
+  source  = "cloudposse/elasticache-redis/aws"
+  version = "0.42.0"
+
+  name = "it supposed not to be updated by dependabot"
+
 }
