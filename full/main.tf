@@ -41,7 +41,7 @@ module "dns_dup" {
 
 module "first-dep" {
   source  = "cloudposse/elasticache-redis/aws"
-  version = "0.42.0"
+  version = "0.42.1"
 
   name = "it supposed to be updated by dependabot"
 }
