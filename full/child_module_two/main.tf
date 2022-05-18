@@ -1,5 +1,5 @@
 module "child" {
-  source                   = "github.com/cloudposse/terraform-aws-s3-log-storage.git?ref=tags/0.2.2"
+  source                   = "github.com/cloudposse/terraform-aws-s3-log-storage.git?ref=tags/0.28.0"
   namespace                = var.namespace
   stage                    = var.stage
   name                     = var.name
