@@ -40,7 +40,7 @@ module "dns_dup" {
 }
 
 module "dns_dup_two" {
-  source           = "git::https://github.com/cloudposse/terraform-aws-route53-cluster-zone.git//some/dir?ref=tags/0.2.5"
+  source           = "git::https://github.com/cloudposse/terraform-aws-route53-cluster-zone.git//some/dir?ref=tags/0.14.0"
   enabled          = var.dns_aliases_enabled
   aliases          = var.aliases
   parent_zone_id   = var.parent_zone_id
