@@ -1,5 +1,5 @@
 module "child-three" {
-  source                       = "git@github.com:cloudposse/terraform-aws-jenkins.git?ref=tags/0.4.0"
+  source                       = "git@github.com:cloudposse/terraform-aws-jenkins.git?ref=tags/0.9.2"
   namespace                    = var.namespace
   stage                        = var.stage
   name                         = var.name
