@@ -1,5 +1,5 @@
 module "child" {
-  source = "./child_module_two"
+  source = "./child"
 }
 
 module "dns" {
